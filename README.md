@@ -1,7 +1,7 @@
 # Automatic-sending-message
 Send the message to arrive at a specific time using [twilio](https://www.twilio.com/)
 
-<img src="https://github.com/ruby-kim/Automatic-sending-message/blob/master/example.jpeg"  width="50%"/>
+<img src="https://github.com/ruby-kim/Automatic-sending-message/blob/master/images/example.jpeg"  width="50%"/>
 
 * ***master branch***: automatically send messages at a specific time using github action.
 * ***local branch***: can test directly in the local environment.

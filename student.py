@@ -1,6 +1,5 @@
 import os
 from dotenv import load_dotenv
-from twilio.rest import Client
 import datetime
 from pytz import timezone
 
@@ -13,7 +12,7 @@ def get_days(year, month, day):
 def validate_days(days):
     current_time = datetime.datetime.now(timezone('Asia/Seoul')).strftime('%Y-%m-%d %H:%M:%S')
     year, month, day = map(int, current_time.split()[0].split('-'))
-    if get_days(year, month, day) in days:
+    if get_days(year, month, day) == days:
         return True
     return False
 

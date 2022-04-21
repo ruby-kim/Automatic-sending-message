@@ -1,5 +1,4 @@
 import os
-from dotenv import load_dotenv
 from twilio.rest import Client
 from student import *
 
@@ -34,7 +33,6 @@ def send_sms(student, idx):
 
 
 if __name__ == "__main__":
-    load_dotenv(verbose=True)
     account_sid = os.environ['ACCOOUNT_SID']
     auth_token = os.environ['AUTH_TOKEN']
     client = Client(account_sid, auth_token)

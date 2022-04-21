@@ -22,9 +22,9 @@ def send_sms(student, idx):
     return None
     """
     message = client.messages.create( 
-        from_=os.getenv('ONLINE_PHONE_NUMBER'),  
+        from_=os.environ['ONLINE_PHONE_NUMBER'],  
         body=generate_body(student.time[idx], student.name),      
-        to=os.getenv('MY_PHONE_NUMBER')
+        to=os.environ['MY_PHONE_NUMBER']
     )
     try:
         message.sid
@@ -35,8 +35,8 @@ def send_sms(student, idx):
 
 if __name__ == "__main__":
     load_dotenv(verbose=True)
-    account_sid = os.getenv('ACCOOUNT_SID')
-    auth_token = os.getenv('AUTH_TOKEN')
+    account_sid = os.environ['ACCOOUNT_SID']
+    auth_token = os.environ['AUTH_TOKEN']
     client = Client(account_sid, auth_token)
 
     students = [Student1(), Student2()]

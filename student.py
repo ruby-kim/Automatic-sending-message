@@ -32,14 +32,14 @@ def validate_days(days):
 class Student1:
     def __init__(self) -> None:
         load_dotenv(verbose=True)
-        self.name = os.getenv('STUDENT_1_NAME')
-        self.days = [os.getenv('STUDENT_1_DATE_1'), os.getenv('STUDENT_1_DATE_2')]
-        self.time = [os.getenv('STUDENT_1_TIME_1'), os.getenv('STUDENT_1_TIME_2')]
+        self.name = os.environ['STUDENT_1_NAME']
+        self.days = [os.environ['STUDENT_1_DATE_1'], os.environ['STUDENT_1_DATE_2']]
+        self.time = [os.environ['STUDENT_1_TIME_1'], os.environ['STUDENT_1_TIME_2']]
 
 
 class Student2:
     def __init__(self) -> None:
         load_dotenv(verbose=True)
-        self.name = os.getenv('STUDENT_2_NAME')
-        self.days = [os.getenv('STUDENT_2_DATE_1')]
-        self.time = [os.getenv('STUDENT_2_TIME_1')]
+        self.name = os.environ['STUDENT_2_NAME']
+        self.days = [os.environ['STUDENT_2_DATE_1']]
+        self.time = [os.environ['STUDENT_2_TIME_1']]

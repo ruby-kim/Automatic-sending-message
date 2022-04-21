@@ -5,10 +5,22 @@ from student import *
 
 
 def generate_body(time, name):
+    """ generate message
+    time: str  -> ex) 7 p.m.
+    name: str  -> ex) James
+    
+    return day of the week
+    """
     return f'''\n\nYou have a class at {time} for {name} today.\nPlease prepare it in advance.'''
 
 
 def send_sms(student, idx):
+    """ send sms based on settings
+    student: class object
+    idx: int  -> ex) 1
+    
+    return None
+    """
     message = client.messages.create( 
         from_=os.getenv('ONLINE_PHONE_NUMBER'),  
         body=generate_body(student.time[idx], student.name),      

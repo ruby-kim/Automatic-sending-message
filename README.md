@@ -46,8 +46,8 @@ Send the message to arrive at a specific time using [twilio](https://www.twilio.
     ACCOUNT_SID="YOUR ACCOUNT SID"
     AUTH_TOKEN="YOUR AUTH TOKEN"
 
-    ONLINE_PHONE_NUMBER = "+12673..."
-    MY_PHONE_NUMBER = "+8210..."
+    ONLINE_PHONE_NUMBER = "+12673..."  # your twilio phone number
+    MY_PHONE_NUMBER = "+8210..."       # your mobile phone number
 
     STUDENT_1_NAME=James
     STUDENT_1_DATE_1=Tue

@@ -1,0 +1,40 @@
+# This workflow will install Python dependencies, run tests and lint with a single version of Python
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
+
+name: Automatic text notification
+
+on:
+  schedule:
+    - cron: 0 9 * * 2
+    - cron: 0 8 * * 6
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python 3.6
+      uses: actions/setup-python@v3
+      with:
+        python-version: "3.6"
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+    - name: Run code
+      env:
+        ACCOUNT_SID: ${{ secrets.ACCOUNT_SID }}
+        AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
+        ONLINE_PHONE_NUMBER: ${{ secret.ONLINE_PHONE_NUMBER }}
+        STUDENT_1_NAME: ${{ secrets.STUDENT_1_NAME }}
+        STUDENT_1_DATE_1: ${{ secrets.STUDENT_1_DATE_1 }}
+        STUDENT_1_DATE_2: ${{ secrets.STUDENT_1_DATE_2 }}
+        STUDENT_1_TIME_1: ${{ secrets.STUDENT_1_TIME_1 }}
+        STUDENT_1_TIME_2: ${{ secrets.STUDENT_1_TIME_2 }}
+      run: |
+        python run.py

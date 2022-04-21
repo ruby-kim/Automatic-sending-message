@@ -33,11 +33,11 @@ def send_sms(student, idx):
 
 
 if __name__ == "__main__":
-    account_sid = os.environ['ACCOOUNT_SID']
+    account_sid = os.environ['ACCOUNT_SID']
     auth_token = os.environ['AUTH_TOKEN']
     client = Client(account_sid, auth_token)
 
-    students = [Student1(), Student2()]
+    students = [Student1()]
 
     for student in students:
         for idx, day in enumerate(student.days):

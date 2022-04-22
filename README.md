@@ -38,7 +38,6 @@ Send the message to arrive at a specific time using [twilio](https://www.twilio.
     git clone https://github.com/ruby-kim/Automatic-sending-message.git
     cd Automatic-sending-messsage
     pip3 install -r requirements.txt
-    python3 run.py
     ```
   * create `.env` and set the variables
     ``` .env

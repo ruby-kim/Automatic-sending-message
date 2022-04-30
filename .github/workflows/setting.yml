@@ -31,6 +31,7 @@ jobs:
         ACCOUNT_SID: ${{ secrets.ACCOUNT_SID }}
         AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
         ONLINE_PHONE_NUMBER: ${{ secrets.ONLINE_PHONE_NUMBER }}
+        MY_PHONE_NUMBER: ${{ secrets.MY_PHONE_NUMBER }}
         STUDENT_1_NAME: ${{ secrets.STUDENT_1_NAME }}
         STUDENT_1_DATE_1: ${{ secrets.STUDENT_1_DATE_1 }}
         STUDENT_1_DATE_2: ${{ secrets.STUDENT_1_DATE_2 }}

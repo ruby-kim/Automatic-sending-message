@@ -61,11 +61,19 @@ Send the message to arrive at a specific time using [twilio](https://www.twilio.
 
 
 
+<br><br>
 
+## License
+[GNU General Public License v3.0](https://github.com/ruby-kim/Automatic-sending-message/blob/master/LICENSE)
 
 
 <br><br>
 
+## Bug & Function Request
+[Please create issues here](https://github.com/ruby-kim/Automatic-sending-message/issues)
+
+
+<br><br>
 ## Developer
 * [@ruby-kim](https://github.com/ruby-kim)
 * Email: dev.rubykim@gmail.com   
